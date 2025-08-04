@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BuildHub AI Agent Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ai-bg-text">AI Agent</div>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <input class="searchbox" type="text" placeholder="Search" />
+      <div class="sidebar-section"><span class="title">Today</span><span class="subtitle">Tell us about your capabilities...</span></div>
+      <div class="sidebar-section"><span class="title">Yesterday</span><span class="subtitle">Tell us about your capabilities...</span></div>
+      <div class="sidebar-section"><span class="title">3 days ago</span><span class="subtitle">Tell us about your capabilities...</span></div>
+      <div class="sidebar-section"><span class="title">7 days ago</span><span class="subtitle">Tell us about your capabilities...</span></div>
+      <div class="sidebar-section"><span class="title">Last 30 days</span><span class="subtitle">Tell us about your capabilities...</span></div>
+      <div class="purchase">🛒 Purchase a subscription to unlock <b>5+ New features</b>.</div>
+    </aside>
+    <main class="main">
+      <div class="circle-logo">
+        <svg width="48" height="48">
+          <defs>
+            <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fff700"/>
+              <stop offset="100%" stop-color="#ffe45c"/>
+            </radialGradient>
+          </defs>
+          <circle cx="24" cy="24" r="18" fill="url(#grad)">
+            <animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="6s" repeatCount="indefinite" />
+          </circle>
+        </svg>
+      </div>
+      <h2 class="welcome">Welcome back <span class="username">Ira!</span></h2>
+      <div class="desc">Which house drawing do you want to analyze today?</div>
+      <div class="capabilities-form">
+        <input type="text" id="capability-input" placeholder="Tell us about your capabilities..." />
+        <label class="ai-toggle"><input type="radio" checked name="ai-option"/>Open AI</label>
+        <button class="send-btn" id="sendBtn" disabled>➤</button>
+      </div>
+      <div id="ai-output" class="output-box"></div>
+      <div class="actions">
+        <div class="action-card" onclick="alert('Searching suppliers...')"><i>🛒</i>Search for suppliers<br/><span>Find resources and best prices</span></div>
+        <div class="action-card" onclick="alert('Selecting materials...')"><i>🔎</i>Select materials<br/><span>Discover and compare materials</span></div>
+        <div class="action-card" onclick="alert('Calculating costs...')"><i>💰</i>Calculation of the cost<br/><span>Analyze the cost of your project</span></div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
