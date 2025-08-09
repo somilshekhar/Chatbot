@@ -53,6 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
       if (e.key === "Enter") sendMessage("chatbot-input", "chatbot-messages");
     });
   }
+
+  // ======= Hamburger menu toggle for mobile =======
+  const menuBtn = document.getElementById("menu-btn");
+  const sidebar = document.querySelector(".sidebar");
+  if (menuBtn && sidebar) {
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+    });
+  }
 });
 
 

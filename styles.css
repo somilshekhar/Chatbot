@@ -249,3 +249,59 @@ body {
   .actions { gap: 14px; }
   .action-card { width: 100%; margin-bottom: 7px; }
 }
+/* Hamburger menu button - hidden on desktop */
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: var(--button-bg);
+  box-shadow: 0 2px 6px #00000055;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 18px;
+  color: var(--accent-yellow);
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.mobile-header button {
+  background: none;
+  border: none;
+  color: var(--accent-yellow);
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+/* Show hamburger header only below 800px */
+@media (max-width: 800px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  /* Sidebar hidden by default on mobile */
+  .sidebar {
+    position: fixed;
+    top: 56px; /* below header */
+    left: -280px;
+    width: 270px;
+    height: calc(100vh - 56px);
+    transition: left 0.3s ease;
+    border-radius: 0;
+    padding-top: 24px;
+    z-index: 1000;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+
+  .dashboard {
+    margin-top: 56px; /* to avoid content hiding under header */
+    flex-direction: column;
+  }
+}
